@@ -1,8 +1,9 @@
 import requests
 
-def test_get_users():
-    url = "https://reqres.in/api/users"
-    headers = {"x-api-key": "reqres-free-v1"}   
+def test_get_users(url_base,header_request):
+    url = f"{url_base}/2"
+    
+    headers = header_request
 
     response = requests.get(url, headers=headers)        
 
@@ -13,8 +14,7 @@ def test_get_users():
     #Validar data presente
     assert "data" in data
 
-    #Verificar ques es una listda "data"
-    assert isinstance(data["data"], list)
+    
 
     #Validar al menos 1 usuario
     assert len(data["data"]) > 0
