@@ -1,5 +1,7 @@
 import requests
+import pytest
 
+@pytest.mark.api
 def test_delete_users(url_base,header_request):
     headers = header_request
 

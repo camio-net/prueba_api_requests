@@ -1,5 +1,7 @@
 import requests
+import pytest
 
+@pytest.mark.api
 def test_post_users(url_base,header_request):
     url = url_base
     headers = header_request

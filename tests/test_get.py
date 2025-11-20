@@ -1,5 +1,7 @@
 import requests
+import pytest
 
+@pytest.mark.api
 def test_get_users(url_base,header_request):
     url = f"{url_base}/2"
     

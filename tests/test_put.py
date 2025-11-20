@@ -1,6 +1,8 @@
 import requests
 import time
+import pytest
 
+@pytest.mark.api
 def test_put_users(url_base,header_request):
     #Variable de tiempo inicio
     inicio = time.time()

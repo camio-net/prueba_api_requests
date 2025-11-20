@@ -1,5 +1,6 @@
 import requests
 
+
 headers = {"x-api-key": "reqres-free-v1"}
 
 url = "https://reqres.in/api/users/page/2"
