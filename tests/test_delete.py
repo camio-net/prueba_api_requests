@@ -1,7 +1,7 @@
 import requests
 
-def test_delete_users(url_base):
-    headers = {"x-api-key": "reqres-free-v1"}
+def test_delete_users(url_base,header_request):
+    headers = header_request
 
     url = f"{url_base}/page/2"
 

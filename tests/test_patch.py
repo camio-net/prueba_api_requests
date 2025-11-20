@@ -1,13 +1,12 @@
 import requests
 
-def test_patch_users():
-    headers = {"x-api-key": "reqres-free-v1"}
+def test_patch_users(url_base,header_request):
+    headers = header_request
 
-    url = "https://reqres.in/api/users/page=2"
+    url = f"{url_base}/page=2"
 
     data = {
-        "name": "marcelo",
-        
+        "name": "marcelo"       
     }
 
     response = requests.patch(url,headers=headers,json=data)

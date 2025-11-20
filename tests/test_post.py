@@ -1,8 +1,8 @@
 import requests
 
-def test_post_users():
-    url = "https://reqres.in/api/users"
-    headers = {"x-api-key": "reqres-free-v1"}   
+def test_post_users(url_base,header_request):
+    url = url_base
+    headers = header_request
 
     payload =  {
     "name": "damian",

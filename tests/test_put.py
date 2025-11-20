@@ -1,13 +1,13 @@
 import requests
 import time
 
-def test_put_users():
+def test_put_users(url_base,header_request):
     #Variable de tiempo inicio
     inicio = time.time()
     
-    headers = {"x-api-key": "reqres-free-v1"}
+    headers = header_request
 
-    url = "https://reqres.in/api/users/page=2"
+    url = f"{url_base}/page=2"
 
     data = {
     "name": "ezequiel",
